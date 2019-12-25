@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>6-2-1：フィルターの自作 - 改行文字をbr要素に変換する</title>
+</head>
+<body>
+
+<div id="app">
+  <textarea v-model="memo" cols="30" rows="10"></textarea>
+  <div v-bind:inner-html.prop="memo | nl2br"></div>
+  <!-- <div v-html="$options.filters.nl2br(memo)"></div> -->
+</div>
+
+<script src="../lib/vue.js"></script>
+<script src="js/filter_br.js"></script>
+</body>
+</html>
