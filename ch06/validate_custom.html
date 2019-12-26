@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>6-3-1：プラグインの利用と自作 検証用プラグインの利用 VeeValidateに自作の検証ルールを追加</title>
+</head>
+<body>
+
+<div id="app">
+  <form>
+    <label for="memo">メモ：</label>
+    <textarea id="memo" name="memo" rows="10" cols="30"
+      v-validate="'ngword:暴力,グロ,エロ'" data-vv-as="メモ"></textarea>
+    <span v-show="errors.has('memo')">{{ errors.first('memo') }}</span>
+  </form>
+</div>
+
+<script src="../lib/vue.js"></script>
+<!-- VeeValidateプラグインをインポート -->
+<script src="https://cdn.jsdelivr.net/npm/vee-validate@2.1.0-beta.9/dist/vee-validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vee-validate@2.1.0-beta.9/dist/locale/ja.js"></script>
+<script src="js/validate_custom.js"></script>
+
+</body>
+</html>
