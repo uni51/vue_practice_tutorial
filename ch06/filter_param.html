@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>6-2-2：フィルターの自作 - パラメータ付きのフィルターを定義する</title>
+</head>
+<body>
+
+<div id="app">
+  <textarea v-model="memo" cols="30" rows="10"></textarea>
+  <div>{{ memo | truncate }}</div>
+  <div>{{ memo | truncate(20, '〜') }}</div>
+</div>
+
+<script src="../lib/vue.js"></script>
+<script src="js/filter_param.js"></script>
+</body>
+</html>
